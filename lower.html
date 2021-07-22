@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--   meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body {
+            background-color: lavender;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <title>The Fashion Gallery</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Fashion Gallery</a>
+            <span class="iconify" data-icon="fa-shopping-bag" data-inline="false"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Explore1.html">Upper Wear</a></li>
+                            <li><a class="dropdown-item" href="lower.html">Lower Wear</a></li>
+                            <li><a class="dropdown-item" href="#">Bottom Wear</a></li>
+                            <li><a class="dropdown-item" href="Explore2.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <!-- Login Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#LoginModal">
+                        login
+                    </button>
+                    <!--  Signup Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#SignupModal">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Email</label>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Signup Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" class="form-control" id="Firstname" aria-describedby="nameHelp">
+                            <label>Lastname</label>
+                            <input type="text" class="form-control" id="lastname" aria-describedby="nameHelp">
+                            <label for="InputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Create Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="Check1">
+                            <label class="form-check-label" for="Check1">Check me out</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--lower collection -->
+    <div class="container">
+        <h1 style="text-align: center;">Lower collection</h1>
+        <h5 style="text-align: center;">We provide you latest trends Lower at one place.</h5>
+        <div class=" row row-cols-1 row-cols-md-4 g-5">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20200821/URIW/5f3ec8a3f997dd2277a2bf74/-473Wx593H-441103729-black-MODEL.jpg"
+                        class="card-img-top" alt="T-shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Mid-Rise Track Pants with Contrast Stripes</h5>
+
+                        <a href="https://www.ajio.com/teamspirit-mid-rise-track-pants-with-contrast-stripes/p/441103729_black?gclid=CjwKCAjwi9-HBhACEiwAPzUhHJKQtAKQLdoME6HKJ3glYMB0gz1INDpo1_tk0YFekGGDG3uLzV34hBoCiO4QAvD_BwE#gmf"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://4.imimg.com/data4/TO/WN/IMOB-48400094/img-20170922-wa0033-500x500.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> MENS NARROW FIT JOGGERS</h5>
+                        <a href="https://www.indiamart.com/proddetail/men-s-wear-lower-16623142088.html"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2019/3/8/ffc74fa7-34a5-4480-87a3-ba5342a6454e1552002945929-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Blue Tapered Fit Mid-Rise Clean Look Stretchable Jeans</h5>
+
+                        <a href="https://www.myntra.com/jeans/highlander/highlander-men-blue-tapered-fit-mid-rise-clean-look-stretchable-jeans/8988449/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/7139482/2018/11/20/67238d5c-8749-47b5-a4e1-732aedc885d91542713378025-Roadster-Men-Black-Slim-Fit-Mid-Rise-Clean-Look-Stretchable-Jeans-9171542713377845-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Black Slim Fit Mid-Rise Clean Look Stretchable Jeans</h5>
+                        <a href="https://www.myntra.com/jeans/roadster/roadster-men-black-slim-fit-mid-rise-clean-look-stretchable-jeans/7139482/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class=" row row-cols-1 row-cols-md-4 g-5">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2018/12/5/ff6ebbdb-7c4f-4e70-9c1d-d734a2525f571544001241540-1.jpg"
+                        class="card-img-top" alt="T-shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Olive Green Slim Fit Solid Cargos</h5>
+
+                        <a href="https://www.myntra.com/trousers/highlander/highlander-men-olive-green-slim-fit-solid-cargos/8098455/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2291319/2018/3/19/11521436134152-Roadster-Men-Navy-Blue-Tapered-Fit-Solid-Joggers-1061521436133897-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Navy Blue Tapered Fit Solid Joggers</h5>
+                        <a href="https://www.myntra.com/trousers/roadster/roadster-men-navy-blue-tapered-fit-solid-joggers/2291319/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/bikai-d5ee5/o/images%2Fba5a3500-e15d-4f20-8002-421bb635273c?alt=media&token=e3f4dd60-5d8c-4d17-b5d2-e5c64664a0f4"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's lower 😻🛍️👖</h5>
+
+                        <a href="https://bikayi.com/AspireCollectionSUp/6/20" class="btn btn-outline-primary "
+                            tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/4/17/e3906b8c-011d-4e8e-9fbc-144a6050a91f1618640709038-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Green Solid Slim-Fit Track Pants </h5>
+                        <a href="https://www.myntra.com/track-pants/highlander/highlander-men-green-solid-slim-fit-track-pants/14121284/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2020–2021 The Fashion Gallery, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

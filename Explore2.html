@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--   meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body {
+            background-color: lavender;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <title>The Fashion Gallery</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Fashion Gallery</a>
+            <span class="iconify" data-icon="fa-shopping-bag" data-inline="false"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Explore1.html">Upper Wear</a></li>
+                            <li><a class="dropdown-item" href="lower.html">Lower Wear</a></li>
+                            <li><a class="dropdown-item" href="#">Bottom Wear</a></li>
+                            <li><a class="dropdown-item" href="Explore2.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <!-- Login Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#LoginModal">
+                        login
+                    </button>
+                    <!--  Signup Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#SignupModal">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Email</label>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Signup Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" class="form-control" id="Firstname" aria-describedby="nameHelp">
+                            <label>Lastname</label>
+                            <input type="text" class="form-control" id="lastname" aria-describedby="nameHelp">
+                            <label for="InputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Create Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="Check1">
+                            <label class="form-check-label" for="Check1">Check me out</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--lower collection -->
+    <div class="container">
+        <h1 style="text-align: center;">Accessories</h1>
+        <h5 style="text-align: center;">We provide you latest trendy Accessories at one place.</h5>
+        <div class=" row row-cols-1 row-cols-md-4 g-5">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10737814/2019/11/2/296d169a-8161-4beb-b2d0-2ddb738bb10a1572686044964-Blueberry-Men-Necklace--Bracelet-Set-5211572686044670-7.jpg"
+                        class="card-img-top" alt="T-shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Necklace & Bracelet Set</h5>
+
+                        <a href="https://www.myntra.com/jewellery-set/blueberry/blueberry-men-necklace--bracelet-set/10737814/buy?utm_source=perf_google_PLA&utm_medium=perf_google_PLA&utm_campaign=PLA-SmartShopping-Top-Category&gclid=CjwKCAjwi9-HBhACEiwAPzUhHLhrHlSj91rf37R78-v36uRWJZD7US3hKBK6O2bDBOj3SNGf5j5nqxoCk_sQAvD_BwE"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.mensxp.com/media/shop/catalog/products/B/708048/black-beaded-bracelets-set-of-4-20803-default.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Black Beaded Bracelets (Set of 4)</h5>
+                        <a href="https://shop.mensxp.com/black-beaded-bracelets-set-of-4-p708048?utm_campaign=MensXP-Smart-Shopping&utm_device=c&utm_term=&network=u&utm_medium=cpc&utm_source=google&agid=80220176829&ap=&aoi=&ci=7385249495&cre=392052687571&fid=&lop=1007819&ma=&mo=&pl=&ti=pla-976626467039&gclid=CjwKCAjwi9-HBhACEiwAPzUhHGym2hESwlSwP1ULG6Hef5xb0axIuYO_0V-CHF3QcMqOHaSh3uOqaxoCxOEQAvD_BwE"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20210416/1srb/607888a2aeb269a9e3929c2f/-473Wx593H-460866189-black-MODEL.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Accessories Gift Set </h5>
+                        <a href="https://www.ajio.com/swiss-design-accessories-gift-set--hobsd20-c-104/p/460866189_black?gclid=CjwKCAjwi9-HBhACEiwAPzUhHFHCtmiGud2hMaexhiezzP7qEewHv03Z2PQuvvBOAVm6y8hPP2TSCRoC6mQQAvD_BwE#gmf"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://cdn.shopclues.com/images/thumbnails/41331/320/320/958036989440235090104995IMG20151027WA000614459622841453213583145863722214661533101468818093.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Metal bracelet Led Mens Watch Dark Samurai Blue LED</h5>
+                        <a href="https://www.shopclues.com/fast-sellingmetal-bracelet-led-mens-watch-dark-samurai-blue-led-watch-7.html"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class=" row row-cols-1 row-cols-md-4 g-5">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://canary.contestimg.wish.com/api/webimage/5ad6d78bc7e80b60ff0e6be7-1-large.jpg"
+                        class="card-img-top" alt="T-shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Hot Style LED Digital Military Watch Men Wathces Colorful Silicone
+                            Triangle Dial Snake Head Sports Wristwatch Arm Band</h5>
+
+                        <a href="https://www.wish.com/product/5ad6d78bc7e80b60ff0e6be7?from_ad=goog_shopping&_display_country_code=IN&_force_currency_code=INR&pid=googleadwords_int&c=%7BcampaignId%7D&ad_cid=5ad6d78bc7e80b60ff0e6be7&ad_cc=IN&ad_lang=EN&ad_curr=INR&ad_price=75.00&fallback_cids=5a43432d7482a37963cffcd15af55848d10082786aaadab3&hide_login_modal=true&share=web"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS3H0rgrM521s93VUm5AUoTktZBEp5rxWMOiVs2LrEAXzoEHcXbpr_VVBwcBa1mVTeJjK9MlSxWjJVlEWR8HaxI6ikPpHIq&usqp=CAY"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Coolest Men's Necklace Thicken Heavy Stainless Steel </h5>
+                        <a href="https://www.wish.com/product/5cf3bbe7d5b582222b056b0b?from_ad=goog_shopping&_display_country_code=IN&_force_currency_code=INR&pid=googleadwords_int&c=%7BcampaignId%7D&ad_cid=5cf3bbe7d5b582222b056b0b&ad_cc=IN&ad_lang=EN&ad_curr=INR&ad_price=214.00&hide_login_modal=true&share=web"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/3/9/d1db549b-5a35-4892-a2f6-3f3fa61eaa211615307460852-1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Antique Gold-Toned Accessory Gift Set</h5>
+
+                        <a href="https://www.myntra.com/accessory-gift-set/cosa-nostraa/cosa-nostraa-men-antique-gold-toned-accessory-gift-set/13839632/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/2/8/ed899222-d10c-4f9e-be3f-a9f05e7922611581113113493-2.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Silver-Toned Accessory Gift Set</h5>
+                        <a href="https://www.myntra.com/accessory-gift-set/peluche/peluche-men-silver-toned-accessory-gift-set/11486672/buy"
+                            class="btn btn-outline-primary " tabindex="-1" role="button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2020–2021 The Fashion Gallery, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
