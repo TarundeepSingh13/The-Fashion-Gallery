@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--   meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body {
+            background-color: lavender;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .staticPage-title {
+            font-size: 36px;
+        }
+    </style>
+
+    <title>The Fashion Gallery</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">The Fashion Gallery</a>
+            <span class="iconify" data-icon="fa-shopping-bag" data-inline="false"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Explore1.html">Upper Wear</a></li>
+                            <li><a class="dropdown-item" href="lower.html">Lower Wear</a></li>
+                            <li><a class="dropdown-item" href="Bottom.html">Bottom Wear</a></li>
+                            <li><a class="dropdown-item" href="Explore2.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <!-- Login Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#LoginModal">
+                        login
+                    </button>
+                    <!--  Signup Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#SignupModal">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Email</label>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Signup Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" class="form-control" id="Firstname" aria-describedby="nameHelp">
+                            <label>Lastname</label>
+                            <input type="text" class="form-control" id="lastname" aria-describedby="nameHelp">
+                            <label for="InputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">Create Password</label>
+                            <input type="password" class="form-control" id="InputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword2">Confirm Password</label>
+                            <input type="password" class="form-control" id="InputPassword2">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="Check1">
+                            <label class="form-check-label" for="Check1">Check me out</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="staticPage-card">
+            <p class="staticPage-title false" style="text-align: center;"><b>Privacy Policy</b></p>
+            <div class="staticPage-section">
+                <hr>
+                <div class="staticPage-sectionTitle"><b>Introduction</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>We value the trust you place in us. That's why we insist upon the highest standards for secure
+                        transactions and customer information privacy. Please read the following statement to learn
+                        about our information gathering and dissemination practices.</p>
+
+                    <p>Note: Our privacy policy is subject to change at any time without notice. To make sure you are
+                        aware of any changes, please review this policy periodically.</p>
+
+                    <p>By visiting this Website or mobile application you agree to be bound by the terms and conditions
+                        of this Privacy Policy. If you do not agree please do not use or access our Website.</p>
+
+                    <p>By mere use of the Website, you expressly consent to our use and disclosure of your personal
+                        information in accordance with this Privacy Policy. This Privacy Policy is incorporated into and
+                        subject to the Terms of Use.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Collection of Personally Identifiable Information and other
+                        Information</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>When you use our Website, we collect and store your personal information which is provided by you
+                        from time to time. Our primary goal in doing so is to provide you a safe, efficient, smooth and
+                        customized experience. This allows us to provide services and features that most likely meet
+                        your needs, and to customize our Website to make your experience safer and easier. More
+                        importantly, while doing so we collect personal information from you that we consider necessary
+                        for achieving this purpose.</p>
+
+                    <p>In general, you can browse the Website without telling us who you are or revealing any personal
+                        information about yourself. Once you give us your personal information, you are not anonymous to
+                        us. Where possible, we indicate which fields are required and which fields are optional. You
+                        always have the option to not provide information by choosing not to use a particular service or
+                        feature on the Website. We may automatically track certain information about you based upon your
+                        behaviour on our Website. We use this information to do internal research on our users'
+                        demographics, interests, and behaviour to better understand, protect and serve our users. This
+                        information is compiled and analysed on an aggregated basis. This information may include the
+                        URL that you just came from (whether this URL is on our Website or not), which URL you next go
+                        to (whether this URL is on our Website or not), your computer browser information, and your IP
+                        address.We use data collection devices such as "cookies" on certain pages of the Website to help
+                        analyse our web page flow, measure promotional effectiveness, and promote trust and safety.
+                        "Cookies" are small files placed on your hard drive that assist us in providing our services. We
+                        offer certain features that are only available through the use of a "cookie". We also use
+                        cookies to allow you to enter your password less frequently during a session. Cookies can also
+                        help us provide information that is targeted to your interests. Most cookies are "session
+                        cookies," meaning that they are automatically deleted at the end of a session. You are always
+                        free to decline our cookies if your browser permits, although in that case you may not be able
+                        to use certain features on the Website and you may be required to re-enter your password more
+                        frequently during a session.</p>
+
+                    <p>Additionally, you may encounter "cookies" or other similar devices on certain pages of the
+                        Website that are placed by third parties. We do not control the use of cookies by third parties.
+                    </p>
+
+                    <p>If you choose to buy on the Website, we collect information about your buying behaviour.</p>
+
+                    <p>If you transact with us, we collect some additional information, such as a billing address, a
+                        credit / debit card number and a credit / debit card expiration date and/ or other payment
+                        instrument details and tracking information from cheques or money orders.</p>
+
+                    <p>If you choose to post messages on our message boards, chat rooms or other message areas or leave
+                        feedback, we will collect that information you provide to us. We retain this information as
+                        necessary to resolve disputes, provide customer support and troubleshoot problems as permitted
+                        by law.</p>
+
+                    <p>If you send us personal correspondence, such as emails or letters, or if other users or third
+                        parties send us correspondence about your activities or postings on the Website, we may collect
+                        such information into a file specific to you.</p>
+
+                    <p>We collect personally identifiable information (email address, name, phone number, credit card /
+                        debit card / other payment instrument details, etc.) from you when you set up a free account
+                        with us. While you can browse some sections of our Website without being a registered member,
+                        certain activities (such as placing an order) do require registration. We do use your contact
+                        information to send you offers based on your previous orders and your interests.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Use of Demographic / Profile Data / Your Information</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>We use personal information to provide the services you request. To the extent we use your
+                        personal information to market to you, we will provide you the ability to opt-out of such uses.
+                        We use your personal information to resolve disputes; troubleshoot problems; help promote a safe
+                        service; collect money; measure consumer interest in our products and services, inform you about
+                        online and offline offers, products, services, and updates; customize your experience; detect
+                        and protect us against error, fraud and other criminal activity; enforce our terms and
+                        conditions; and as otherwise described to you at the time of collection.</p>
+
+                    <p>With your consent, we will have access to your SMS, contacts in your directory, location and
+                        device information. We may share this data with our affiliates. In the event that consent to
+                        this such use of data is withdrawn in the future, we will stop collection of such data but
+                        continue to store the data and use it for internal purposes to further improve our services.</p>
+
+                    <p>In our efforts to continually improve our product and service offerings, we collect and analyse
+                        demographic and profile data about our users' activity on our Website.</p>
+
+                    <p>We identify and use your IP address to help diagnose problems with our server, and to administer
+                        our Website. Your IP address is also used to help identify you and to gather broad demographic
+                        information.</p>
+
+                    <p>We will occasionally ask you to complete optional online surveys. These surveys may ask you for
+                        contact information and demographic information (like pin code, age, or income level). We use
+                        this data to tailor your experience at our Website, providing you with content that we think you
+                        might be interested in and to display content according to your preferences.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Sharing of personal information</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>We may share personal information with our other corporate entities and affiliates. These
+                        entities and affiliates may market to you as a result of such sharing unless you explicitly
+                        opt-out.</p>
+
+                    <p>We may disclose personal information to third parties. This disclosure may be required for us to
+                        provide you access to our Services, to comply with our legal obligations, to enforce our User
+                        Agreement, to facilitate our marketing and advertising activities, or to prevent, detect,
+                        mitigate, and investigate fraudulent or illegal activities related to our Services. We do not
+                        disclose your personal information to third parties for their marketing and advertising purposes
+                        without your explicit consent.</p>
+
+                    <p>We may disclose personal information if required to do so by law or in the good faith belief that
+                        such disclosure is reasonably necessary to respond to subpoenas, court orders, or other legal
+                        process. We may disclose personal information to law enforcement offices, third party rights
+                        owners, or others in the good faith belief that such disclosure is reasonably necessary to:
+                        enforce our Terms or Privacy Policy; respond to claims that an advertisement, posting or other
+                        content violates the rights of a third party; or protect the rights, property or personal safety
+                        of our users or the general public.</p>
+
+                    <p>We and our affiliates will share / sell some or all of your personal information with another
+                        business entity should we (or our assets) plan to merge with, or be acquired by that business
+                        entity, or re-organization, amalgamation, restructuring of business. Should such a transaction
+                        occur that other business entity (or the new combined entity) will be required to follow this
+                        privacy policy with respect to your personal information.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Links to Other Sites</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>Our Website links to other websites that may collect personally identifiable information about
+                        you. Fashion Gallery is not responsible for the privacy practices or the content of those linked
+                        websites.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Security Precautions</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>Our Website has stringent security measures in place to protect the loss, misuse, and alteration
+                        of the information under our control. Whenever you change or access your account information, we
+                        offer the use of a secure server. Once your information is in our possession we adhere to strict
+                        security guidelines, protecting it against unauthorized access.</p>
+                </div>
+            </div>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Choice/Opt-Out</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>We provide all users with the opportunity to opt-out of receiving non-essential (promotional,
+                        marketing-related) communications from us on behalf of our partners, and from us in general,
+                        after setting up an account.</p>
+
+                    <p>If you want to remove your contact information from all
+                        https://tarundeepsingh13.github.io/The-Fashion-Gallery/home.html lists and newsletters,
+                        please visit unsubscribe.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle">
+                    <b>https://tarundeepsingh13.github.io/The-Fashion-Gallery/home.html</b>
+                </div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>We use third-party advertising companies to serve ads when you visit our Website. These companies
+                        may use information (not including your name, address, email address, or telephone number) about
+                        your visits to this and other websites in order to provide advertisements about goods and
+                        services of interest to you.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Your Consent</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>By using the Website and/ or by providing your information, you consent to the collection and use
+                        of the information you disclose on the Website in accordance with this Privacy Policy, including
+                        but not limited to Your consent for sharing your information as per this privacy policy.</p>
+
+                    <p>If we decide to change our privacy policy, we will post those changes on this page so that you
+                        are always aware of what information we collect, how we use it, and under what circumstances we
+                        disclose it.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="staticPage-section">
+                <div class="staticPage-sectionTitle"><b>Grievance Officer</b></div>
+                <div class="staticPage-sectionDesc false false">
+                    <p>In accordance with Information Technology Act 2000 and rules made there under, the name and
+                        contact details of the Grievance Officer are provided below:</p>
+
+                    <p> Mr. Amandeep singh (Owner)</p>
+
+                    <p> Designation: Senior Manager - CC - Operations</p>
+
+                    <p>The-Fashion-Gallery Pvt Ltd ,</p>
+
+                    <p>Shimla By-Pass Road Naya Gaun Pelio </p>
+
+                    <p>Shimla By-Pass Road Naya Gaun Pelio, Dehradun:248007, Uttarakhand, India
+                    </p>
+
+                    <p> Contact us: Amandeep3730@gmail.com</p>
+
+                    <p>Phone: +91-9897080809</p>
+
+                    <p>Time: Mon - Sat (9:00 - 18:00).</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2020–2021 The Fashion Gallery, Inc. · <a href="PP.html">Privacy</a> · </p>
+          </footer>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
